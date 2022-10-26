@@ -1,0 +1,11 @@
+username,employeeID,password,phoneNumber,settingsFile,twoFactor,email
+jrma,ADMIN0,a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3,+19784826599,none,,
+tkevans,ADMIN2,c0e86e176efca32dccdb5ca0ce3948bc523473a7bda54d997291ee1fb885ec44,+12073317970,none,,
+ShafathZ,DOC1,124ce8d002a7d79e0f4aa5f73c91e06f4cfe69b04a77b5a19c1e6642bb08ce30,+15083450937,none,SMS,
+Joanna.Hu,DOC2,474bd9948b8d0cd99f483f6104ed7da18f1d1488c214eb6e771b91bdc62bb159,,none,,
+test,KIT1,9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08,,none,,
+gardone,KIT2,8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918,+12035050116,none,,
+cgarcia,ADMIN1,541ba63f0cb671ecef88976905c887809ac93861e1e05992605f5ba379ca34f5,+17813506471,none,,
+admin,admin,8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918,,none,,
+staff,staff,1562206543da764123c21bd524674f0a8aaf49c8a89744c97352fe677f7e4006,,none,,
+rfid,admin,22e46dd1bd16cea8e78f77486ea313ac3f8af0f54c7c3f56bc737b20013c92d4,,none,rfid,

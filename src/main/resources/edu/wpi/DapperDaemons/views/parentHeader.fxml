@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="sceneBox" onKeyPressed="#konami" prefHeight="592.0" prefWidth="941.0" styleClass="home" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.ParentController">
+   <children>
+      <StackPane id="pageBackground" fx:id="windowContents" prefHeight="150.0" prefWidth="200.0" stylesheets="@../styling/lightMode.css" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox fx:id="childContainer" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" StackPane.alignment="CENTER_RIGHT">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </HBox>
+            <BorderPane pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <VBox id="headerBackground" fx:id="slider" pickOnBounds="false" prefHeight="541.0" prefWidth="225.0" style="-fx-background-color: #012D5A;" styleClass="headerBackground" stylesheets="@../styling/lightMode.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton onMouseClicked="#goHome" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" ripplerFill="#ffffff00" styleClass="burger" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/home.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToMedicine" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" ripplerFill="#ffffff00" styleClass="burger" stylesheets="@../assets/buttons.css" text="Medication Delivery" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/rx.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToLabRequest" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Lab Request" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/operating_room.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToMeal" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Meal Delivery" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/dish.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToPatientTransport" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Int. Patient Transport" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/patientInt.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToExtPatientTransport" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Ext. Patient Transport" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/patientExt.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToSanitation" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Sanitation Service" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/shower.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToEquipSani" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Equipment Sanitation" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/equipSani.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="burger" onMouseClicked="#switchToEquipment" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Equipment Delivery" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/blood_bag.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToLanguage" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Request Interpreter" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/language.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="279.0" onMouseClicked="#switchToSecurity" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Security Services" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/security.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToUserRequests" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="User Requests" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/userRequests.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToEmployeeManager" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="All Employees" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/employees.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#switchToMapDashboard" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Map" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/route_map.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+
+                        <JFXButton onMouseClicked="#switchToAboutUs" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text=" ?   About Us" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton onMouseClicked="#quitProgram" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" styleClass="burger" stylesheets="@../assets/buttons.css" text="Quit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/Glyphs/exit.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </left>
+               <top>
+                  <HBox id="headerBackground" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="528.0" style="-fx-background-color: #012D5A;" styleClass="headerBackground" stylesheets="@../styling/lightMode.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" onMouseClicked="#goHome" prefHeight="51.0" prefWidth="42.0">
+                           <children>
+                              <ImageView fx:id="homeIcon" fitHeight="37.0" fitWidth="29.0" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../assets/BrighamLogoWhite.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="12.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="51.0" prefWidth="34.0">
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXHamburger fx:id="burg" alignment="CENTER" prefHeight="51.0" prefWidth="38.0" scaleX="0.6" scaleY="0.6">
+                                       <effect>
+                                          <ColorAdjust brightness="1.0" />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXHamburger>
+                                    <JFXHamburger fx:id="burgBack" alignment="CENTER" prefHeight="51.0" prefWidth="38.0" scaleX="0.6" scaleY="0.6" visible="false">
+                                       <effect>
+                                          <ColorAdjust brightness="1.0" />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXHamburger>
+                                 </children>
+                              </StackPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="51.0" prefWidth="8.0">
+                           <children>
+                              <Line endX="-100.0" endY="27.82622528076172" startX="-100.0" stroke="WHITE" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" minWidth="-Infinity" onMouseClicked="#updateWeather" prefHeight="100.0" prefWidth="85.0">
+                           <children>
+                              <ImageView fx:id="weatherIcon" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label id="normalText" fx:id="tempLabel" prefHeight="30.0" styleClass="normalText" stylesheets="@../styling/lightMode.css" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="serverBox" alignment="CENTER_LEFT" pickOnBounds="false" prefHeight="100.0" prefWidth="30.0">
+                           <children>
+                              <ToggleButton fx:id="serverToggle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openServerDropdown" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" text="ToggleButton">
+                                 <graphic>
+                                    <ImageView fx:id="serverIcon" fitHeight="30.0" fitWidth="30.0" preserveRatio="true" />
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="380.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text id="title" fx:id="headerNameField" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Page Name" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Gill Sans MT Ext Condensed Bold" size="39.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0">
+                           <children>
+                              <Label id="normalText" fx:id="time" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="130.0" styleClass="normalText" stylesheets="@../styling/lightMode.css" text="00:00 - 00/00" textAlignment="RIGHT" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="51.0" prefWidth="7.0">
+                           <children>
+                              <Line endX="-100.0" endY="27.82622528076172" startX="-100.0" stroke="WHITE" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <ToggleButton fx:id="alertButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openNotifications" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="32.0">
+                                 <children>
+                                    <ImageView fx:id="notifBell" fitHeight="28.0" fitWidth="28.0" nodeOrientation="INHERIT">
+                                       <image>
+                                          <Image url="@../assets/Glyphs/bell.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ToggleButton>
+                        <ToggleButton id="normalText" fx:id="userSettingsToggle" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openUserDropdown" prefHeight="45.0" prefWidth="180.0" style="-fx-background-radius: 7.5; -fx-background-color: transparent;" stylesheets="@../styling/lightMode.css" textFill="WHITE">
+                           <graphic>
+                              <HBox accessibleRole="TOGGLE_BUTTON" alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="190.0" style="-fx-background-radius: 7.5;" stylesheets="@../styling/lightMode.css">
+                                 <children>
+                                    <Text id="normalText" fx:id="accountName" fill="WHITE" onMouseEntered="#hoveredBurger" onMouseExited="#unhoveredBurger" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normalText" text="account Name">
+                                       <font>
+                                          <Font name="Inter SemiBold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fx:id="profilePic" fill="#d2d2d2" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets bottom="12.0" left="10.0" right="3.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Circle>
+                                 </children>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </HBox>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ToggleButton>
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+            <HBox fx:id="accountSettingsHBox" alignment="TOP_RIGHT" pickOnBounds="false" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox id="pageCard" fx:id="userDropdown" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="120.0" prefWidth="160.0" style="-fx-background-color: FFFEFE; -fx-background-radius: 7.5;" styleClass="pageCard" stylesheets="@../styling/lightMode.css" visible="false">
+                     <children>
+                        <JFXButton fx:id="userSettingsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#openUserSettings" prefHeight="40.0" prefWidth="140.0" styleClass="cardText" stylesheets="@../styling/lightMode.css" textFill="#2e2e2e">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/HomeIcons/UserSettingsGlyph.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#faf8f8" strokeWidth="0.0" styleClass="cardText" text="User Settings">
+                                       <HBox.margin>
+                                          <Insets left="13.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <font>
+                              <Font name="Inter Medium" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Line endX="50.0" startX="-90.0" stroke="#d2d2d2" />
+                        <JFXButton fx:id="logoutButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#logout" prefHeight="40.0" prefWidth="140.0" styleClass="cardText" stylesheets="@../styling/lightMode.css" textFill="#ffffff00">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/HomeIcons/userLogoutIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Logout">
+                                       <HBox.margin>
+                                          <Insets left="13.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Line endX="50.0" startX="-90.0" stroke="#d2d2d2" />
+                        <JFXButton id="cardText" fx:id="exitButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#quitProgram" prefHeight="40.0" prefWidth="140.0" styleClass="cardText" stylesheets="@../styling/lightMode.css" text="Button" textFill="#ffffff00">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/HomeIcons/userExitIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="WHITE" strokeWidth="0.0" styleClass="cardText" text="Exit">
+                                       <HBox.margin>
+                                          <Insets left="13.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" top="50.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox pickOnBounds="false" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox fx:id="serverDropdown" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="80.0" prefWidth="140.0" style="-fx-background-color: FFFEFE; -fx-background-radius: 0 0 7.5 7.5;" visible="false">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.15000000596046448" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <children>
+                        <JFXButton fx:id="serverButtonOne" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="140.0" textFill="TRANSPARENT">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fx:id="serverSlotOne" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/HomeIcons/UserSettingsGlyph.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="serverSlotOneText" strokeWidth="0.0" text="User Settings">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </JFXButton>
+                        <Line endX="30.0" startX="-90.0" stroke="#d2d2d2" />
+                        <JFXButton fx:id="serverButtonTwo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="140.0" textFill="TRANSPARENT">
+                           <graphic>
+                              <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="120.0">
+                                 <children>
+                                    <ImageView fx:id="serverSlotTwo" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/HomeIcons/userLogoutIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="serverSlotTwoText" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </JFXButton>
+                        <Line endX="30.0" startX="-90.0" stroke="#d2d2d2" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="200.0" top="50.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" pickOnBounds="false" prefHeight="100.0" prefWidth="200.0" StackPane.alignment="CENTER_RIGHT">
+               <children>
+                  <ScrollPane fx:id="notificationsScroller" hbarPolicy="NEVER" maxHeight="100.0" minHeight="0.0" prefHeight="0.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER" visible="false">
+                     <HBox.margin>
+                        <Insets right="180.0" top="49.0" />
+                     </HBox.margin>
+                     <content>
+                        <VBox fx:id="notifications" alignment="CENTER" prefHeight="100.0" spacing="10.0" styleClass="pageCard" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+            <ImageView fx:id="autoSaveIcon" fitHeight="40.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" visible="false" StackPane.alignment="BOTTOM_RIGHT">
+               <image>
+                  <Image url="@../assets/refresh.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </children>
+   <stylesheets>
+      <URL value="@../assets/themeBlue.css" />
+      <URL value="@../assets/themeDark.css" />
+      <URL value="@../assets/themeRed.css" />
+      <URL value="@../assets/buttons.css" />
+   </stylesheets>
+</VBox>

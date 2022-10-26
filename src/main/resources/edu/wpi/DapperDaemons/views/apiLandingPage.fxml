@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="defaultPage" alignment="CENTER" pickOnBounds="false" prefHeight="973.0" prefWidth="1067.0" stylesheets="@../assets/buttons.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.APILandingController">
+    <children>
+      <VBox alignment="CENTER" prefHeight="973.0" prefWidth="366.0">
+         <children>
+                    <VBox maxHeight="260.0" maxWidth="270.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="235.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;">
+                        <children>
+                            <HBox id="foreground" alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="269.0">
+                                <VBox.margin>
+                                    <Insets />
+                                </VBox.margin>
+                                <children>
+                                    <Label id="label" text="Sanitation Request" textFill="#2f2f2f" wrapText="true" HBox.hgrow="NEVER">
+                                        <padding>
+                                            <Insets left="10.0" right="10.0" />
+                                        </padding>
+                                        <font>
+                                            <Font name="System Bold" size="18.0" />
+                                        </font>
+                                        <HBox.margin>
+                                            <Insets right="10.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <HBox id="foreground" fillHeight="false" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 7.5;">
+                                <children>
+                                    <Label id="label" prefHeight="137.0" prefWidth="362.0" style="-fx-max-width: &quot;Infinity&quot;;" text="Team-D API " textFill="#2f2f2f" wrapText="true" HBox.hgrow="ALWAYS">
+                                        <HBox.margin>
+                                            <Insets bottom="10.0" left="10.0" right="10.0" />
+                                        </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="270.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Specify Location ID: " />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="170.0">
+                           <children>
+                              <TextField fx:id="teamDLoc" prefHeight="42.0" prefWidth="270.0">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="74.0" prefWidth="270.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="dSave" mnemonicParsing="false" onAction="#databaseSaverTeamD" prefHeight="38.0" prefWidth="123.0" style="-fx-background-color: #059DA7; -fx-background-radius: 7.5;" text="Save To Database" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#startTeamDApi" prefHeight="38.0" prefWidth="123.0" style="-fx-background-radius: 7.5; -fx-background-color: #059DA7;" text="Run API" textFill="WHITE">
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="270.0">
+                     <children>
+                        <Label fx:id="errorLabel" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                        </children>
+                        <effect>
+                            <DropShadow>
+                                <color>
+                                    <Color opacity="0.15000000596046448" />
+                                </color>
+                            </DropShadow>
+                        </effect>
+               <VBox.margin>
+                  <Insets bottom="35.0" />
+               </VBox.margin>
+                    </VBox>
+         </children>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="973.0" prefWidth="417.0">
+         <children>
+                    <VBox alignment="CENTER" maxHeight="260.0" maxWidth="270.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="235.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;">
+                        <effect>
+                            <DropShadow>
+                                <color>
+                                    <Color opacity="0.15000000596046448" />
+                                </color>
+                            </DropShadow>
+                        </effect>
+               <children>
+                  <HBox id="foreground" alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="270.0">
+                     <children>
+                        <Label id="label" text="External Transport Request" textFill="#2f2f2f" wrapText="true" HBox.hgrow="NEVER">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="foreground" fillHeight="false" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 7.5;">
+                     <children>
+                        <Label id="label" prefHeight="137.0" prefWidth="362.0" style="-fx-max-width: &quot;Infinity&quot;;" text="Team-Z API " textFill="#2f2f2f" wrapText="true" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="270.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Specify Origin Location ID: ">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="170.0">
+                           <children>
+                              <TextField fx:id="zOrigin" prefHeight="26.0" prefWidth="117.0">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="270.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Specify Destination Location ID: " />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="170.0">
+                           <children>
+                              <TextField fx:id="zDest" prefHeight="42.0" prefWidth="270.0">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="74.0" prefWidth="270.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="zSave" mnemonicParsing="false" onAction="#databaseSaverTeamZ" prefHeight="38.0" prefWidth="123.0" style="-fx-background-color: #059DA7; -fx-background-radius: 7.5;" text="Save To Database" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#startTeamZApi" prefHeight="38.0" prefWidth="123.0" style="-fx-background-radius: 7.5; -fx-background-color: #059DA7;" text="Run API" textFill="WHITE">
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="270.0">
+                     <children>
+                        <Label fx:id="zErrorLabel" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+                    </VBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="35.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="973.0" prefWidth="413.0">
+         <children>
+                    <VBox alignment="CENTER" maxHeight="260.0" maxWidth="270.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="270.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;">
+                        <children>
+                  <HBox id="foreground" alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="270.0">
+                     <children>
+                        <Label id="label" text="Internal Transport Request" textFill="#2f2f2f" wrapText="true" HBox.hgrow="NEVER">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox id="foreground" fillHeight="false" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 7.5;">
+                     <children>
+                        <Label id="label" prefHeight="137.0" prefWidth="362.0" style="-fx-max-width: &quot;Infinity&quot;;" text="Team-B API " textFill="#2f2f2f" wrapText="true" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="45.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox id="foreground" fillHeight="false" prefHeight="34.0" prefWidth="270.0" style="-fx-background-radius: 7.5;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label id="label" alignment="CENTER" prefHeight="137.0" prefWidth="110.0" style="-fx-max-width: &quot;Infinity&quot;;" text="Specify Patient ID:" textFill="#2f2f2f" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox id="foreground" alignment="CENTER_LEFT" fillHeight="false" prefHeight="27.0" prefWidth="169.0" style="-fx-background-radius: 7.5;">
+                           <children>
+                              <TextField fx:id="bPatient" prefHeight="42.0" prefWidth="124.0">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="74.0" prefWidth="270.0">
+                     <children>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="bSave" mnemonicParsing="false" onAction="#databaseSaverTeamB" prefHeight="38.0" prefWidth="123.0" style="-fx-background-color: #059DA7; -fx-background-radius: 7.5;" text="Save To Database" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#startTeamBAPI" prefHeight="38.0" prefWidth="123.0" style="-fx-background-radius: 7.5; -fx-background-color: #059DA7;" text="Run API" textFill="WHITE">
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="270.0">
+                     <children>
+                        <Label fx:id="bErrorLabel" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                        </children>
+                        <effect>
+                            <DropShadow>
+                                <color>
+                                    <Color opacity="0.15000000596046448" />
+                                </color>
+                            </DropShadow>
+                        </effect>
+               <VBox.margin>
+                  <Insets bottom="35.0" />
+               </VBox.margin>
+                    </VBox>
+         </children>
+      </VBox>
+    </children>
+</HBox>

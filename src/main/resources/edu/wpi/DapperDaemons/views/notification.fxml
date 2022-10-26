@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="notif" maxHeight="120.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" style="-fx-background-color: FFFEFE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="notifSubject" text="SUBJECT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="3.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="notifBody" text="'PERSON' ASSIGNED YOU TO 'REQUEST'" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Line endX="-101.92079162597656" endY="-3.899550437927246" startX="-236.21368408203125" startY="-3.556425094604492" />
+   </children>
+   <padding>
+      <Insets left="5.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox prefHeight="969.0" prefWidth="1388.0" spacing="30.0" styleClass="pageBackground" stylesheets="@../styling/lightMode.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.MapDashboardController">
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <children>
+      <VBox maxWidth="370.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <StackPane alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label styleClass="cardTitle" text="5" translateY="100.0" />
+                  <Pane fx:id="LL2Container" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="floorLL2" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" translateY="300.0">
+                           <image>
+                              <Image url="@../assets/MapDash/floorLayers/floorlayer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="35.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Label styleClass="cardTitle" text="4" translateY="150.0" />
+                  <Pane fx:id="LL1Container" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="floorLL1" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" translateY="250.0">
+                           <image>
+                              <Image url="@../assets/MapDash/floorLayers/floorlayer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="35.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Label styleClass="cardTitle" text="3" translateY="200.0" />
+                  <Pane fx:id="OneContainer" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="floor1" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" translateY="200.0">
+                           <image>
+                              <Image url="@../assets/MapDash/floorLayers/floorlayer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="35.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Label styleClass="cardTitle" text="2" translateY="250.0" />
+                  <Pane fx:id="TwoContainer" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="floor2" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" translateY="150.0">
+                           <image>
+                              <Image url="@../assets/MapDash/floorLayers/floorlayer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="35.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Label styleClass="cardTitle" text="1" translateY="300.0" />
+                  <Pane fx:id="ThreeContainer" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="floor3" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" translateY="100.0">
+                           <image>
+                              <Image url="@../assets/MapDash/floorLayers/floorlayer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="35.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Label styleClass="cardTitle" text="L1" translateY="350.0" />
+                  <Pane fx:id="FourContainer" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="floor4" fitHeight="150.0" fitWidth="200.0" preserveRatio="true" translateY="50.0">
+                           <image>
+                              <Image url="@../assets/MapDash/floorLayers/floorlayer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="35.0" />
+                     </StackPane.margin>
+                  </Pane>
+                  <Label styleClass="cardTitle" text="L2" translateY="400.0" />
+                  <Pane fx:id="FiveContainer" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="floor5" fitHeight="150.0" fitWidth="200.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/MapDash/floorLayers/floorlayer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <StackPane.margin>
+                        <Insets left="35.0" />
+                     </StackPane.margin>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0" HBox.hgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="169.0" style="-fx-background-color: #fffefe; -fx-background-radius: 7.5;" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #08439C; -fx-border-style: solid hidden solid hidden; -fx-border-width: 3;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text fx:id="floorNumberLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="floorSummary" text="Patient Rooms" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="4.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="12.5" right="12.5" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="71.0" prefWidth="200.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5 7.5 0 0;" VBox.vgrow="NEVER">
+                     <children>
+                        <Text fill="#052f92" strokeType="OUTSIDE" strokeWidth="0.0" text="Interactive Map">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox onMouseClicked="#switchToMap" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" hvalue="0.5" nodeOrientation="LEFT_TO_RIGHT" onScroll="#consumeScroll" onScrollFinished="#consumeScroll" onScrollStarted="#consumeScroll" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER" vvalue="0.492" VBox.vgrow="ALWAYS">
+                                 <content>
+                                    <StackPane alignment="TOP_LEFT" onScroll="#consumeScroll" onScrollFinished="#consumeScroll" onScrollStarted="#consumeScroll" prefHeight="150.0" prefWidth="200.0" scaleX="0.135" scaleY="0.135">
+                                       <children>
+                                          <Pane fx:id="mapContainer" onScroll="#consumeScroll" onScrollFinished="#consumeScroll" onScrollStarted="#consumeScroll" prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fx:id="mapImage" fitHeight="150.0" fitWidth="200.0" onScroll="#consumeScroll" onScrollFinished="#consumeScroll" onScrollStarted="#consumeScroll" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </Pane>
+                                          <AnchorPane fx:id="glyphsLayer" onScroll="#consumeScroll" onScrollFinished="#consumeScroll" onScrollStarted="#consumeScroll" prefHeight="200.0" prefWidth="200.0" />
+                                          <AnchorPane fx:id="equipLayer" onScroll="#consumeScroll" onScrollFinished="#consumeScroll" onScrollStarted="#consumeScroll" prefHeight="200.0" prefWidth="200.0" />
+                                       </children>
+                                    </StackPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="440.0" spacing="30.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fffefe; -fx-background-radius: 7.5;" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="71.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Text fill="#052f92" strokeType="OUTSIDE" strokeWidth="0.0" text="Request">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" pannable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                           <content>
+                              <GridPane fx:id="table" style="-fx-background-color: FFFFFF;" vgap="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <padding>
+                                    <Insets bottom="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fffefe; -fx-background-radius: 7.5;" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="71.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Text fill="#052f92" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <GridPane HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                    <PieChart fx:id="pumpChart" labelsVisible="false" legendVisible="false" startAngle="90.0" />
+                                    <Circle fill="#fffefe" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/pump.png" />
+                                             </image>
+                                             <effect>
+                                                <ColorAdjust brightness="-1.0" />
+                                             </effect>
+                                          </ImageView>
+                                          <Label fx:id="pumpLabel" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                    <PieChart labelsVisible="false" legendVisible="false" startAngle="90.0" fx:id="xrayChart" />
+                                    <Circle fill="#fffefe" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/xray.png" />
+                                             </image>
+                                             <effect>
+                                                <ColorAdjust brightness="-1.0" />
+                                             </effect>
+                                          </ImageView>
+                                          <Label text="Label" fx:id="xrayLabel" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                    <PieChart fx:id="reclinerChart" labelsVisible="false" legendVisible="false" startAngle="90.0" />
+                                    <Circle fill="#fffefe" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/recliner.png" />
+                                             </image>
+                                             <effect>
+                                                <ColorAdjust brightness="-1.0" />
+                                             </effect>
+                                          </ImageView>
+                                          <Label fx:id="reclinerLabel" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                    <PieChart fx:id="bedChart" labelsVisible="false" legendVisible="false" startAngle="90.0" />
+                                    <Circle fill="#fffefe" radius="40.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/bed.png" />
+                                             </image>
+                                             <effect>
+                                                <ColorAdjust brightness="-1.0" />
+                                             </effect>
+                                          </ImageView>
+                                          <Label fx:id="bedLabel" text="Label" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </GridPane>
+                     </children></HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

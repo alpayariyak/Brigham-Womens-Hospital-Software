@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox prefHeight="541.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.UserSecurityController">
+    <children>
+        <StackPane alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+            <children>
+                <VBox id="background" fx:id="homeSettingsPage" alignment="TOP_CENTER" pickOnBounds="false" prefHeight="565.0" prefWidth="444.0" spacing="16.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="NEVER">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #C4C4C4; -fx-border-width: 0 0 2 0;">
+                                    <children>
+                                        <Circle fx:id="profilePic" fill="#d2d2d2" radius="90.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="6.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets left="40.0" right="40.0" />
+                                    </VBox.margin>
+                                </VBox>
+                                <Text id="label" fx:id="accountName" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Name">
+                                    <font>
+                                        <Font size="23.0" />
+                                    </font>
+                                </Text>
+                                <Text id="label" fx:id="accountUserName" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+                                    <font>
+                                        <Font size="12.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="16.0" />
+                            </VBox.margin>
+                        </VBox>
+                  <VBox id="foreground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="470.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;" VBox.vgrow="NEVER">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="NEVER">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="460.0" style="-fx-background-color: #4B5B81; -fx-background-radius: 7.5 7.5 0 0;" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label text="Security Access" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                           <children>
+                              <VBox prefHeight="17.0" prefWidth="149.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <Label id="label" text="Access Level:">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="17.0" prefWidth="163.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <Label id="label" fx:id="securityLevel" text="access level">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.15000000596046448" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </VBox>
+                        <VBox id="foreground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="470.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;" VBox.vgrow="NEVER">
+                            <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" prefWidth="460.0" style="-fx-background-color: #4B5B81; -fx-background-radius: 7.5 7.5 0 0;" VBox.vgrow="NEVER">
+                           <children>
+                              <Label text="Two-Factor Authentication" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </VBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <VBox prefHeight="36.0" prefWidth="260.0" spacing="45.0" HBox.hgrow="NEVER">
+                                            <children>
+                                                <Label id="label" text="Password:" />
+                                                <Label id="label" text="Phone Number:" />
+                                    <Label id="label" text="Type:" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="10.0" top="5.0" />
+                                            </padding>
+                                        </VBox>
+                                        <VBox prefHeight="154.0" prefWidth="264.0" spacing="20.0" HBox.hgrow="NEVER">
+                                            <children>
+                                    <Text id="label" strokeType="OUTSIDE" strokeWidth="0.0" text="If you would like to change/reset your password, please contact your administrator." wrappingWidth="200.5107421875" />
+                                    <TextField fx:id="numberBox" prefHeight="33.0" prefWidth="227.0" text="000-000-0000">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></TextField>
+                                    <JFXComboBox fx:id="type2FABox" prefHeight="26.0" prefWidth="234.0" promptText="Select..." />
+                                            </children>
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </VBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="15.0" left="10.0" right="10.0" />
+                            </VBox.margin>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.15000000596046448" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="480.0" spacing="10.0" VBox.vgrow="NEVER">
+                            <children>
+                                <JFXButton onAction="#onReset" style="-fx-background-color: #C1C5D4;" stylesheets="@../assets/buttons.css" text="Reset" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                                <JFXButton onAction="#onSaveChanges" style="-fx-background-color: #059DA7;" stylesheets="@../assets/buttons.css" text="Save Changes" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="15.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+              <VBox id="background" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="390.0" prefWidth="220.0">
+                  <children>
+                      <ToggleButton id="foreground" fx:id="homeButton" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goUserHome" pickOnBounds="false" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0;" text="Home" VBox.vgrow="ALWAYS">
+                          <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                          </graphic>
+                          <font>
+                              <Font size="12.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </ToggleButton>
+                      <ToggleButton id="foreground" fx:id="accountSettingsButton" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openAccountSettings" pickOnBounds="false" style="-fx-background-color: #FFFEFE; -fx-border-color: #C4C4C4; -fx-border-width: 1 0 0 0; -fx-background-radius: 0;" text="Account Settings">
+                          <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                          </graphic>
+                          <font>
+                              <Font size="12.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </ToggleButton>
+                      <ToggleButton id="foreground" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openUserSecurity" pickOnBounds="false" style="-fx-background-color: #FFFEFE; -fx-border-color: #C4C4C4; -fx-border-width: 1 0 0 0; -fx-background-radius: 0;" text="Security">
+                          <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                          </graphic>
+                          <font>
+                              <Font size="12.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </ToggleButton>
+                      <ToggleButton id="foreground" fx:id="aboutButton" alignment="CENTER_LEFT" layoutX="10.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openAboutUs" onMouseClicked="#switchToAboutUs" pickOnBounds="false" style="-fx-background-color: #FFFEFE; -fx-background-radius: 0 0 7.5 0; -fx-border-color: #C4C4C4; -fx-border-width: 1 0 0 0;" text="About">
+                          <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                          </graphic>
+                          <font>
+                              <Font size="12.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </ToggleButton>
+                  </children>
+              </VBox>
+            </children>
+        </StackPane>
+    </children>
+</HBox>

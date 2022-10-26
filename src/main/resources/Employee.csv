@@ -1,0 +1,14 @@
+nodeID,firstName,lastName,dateOfBirth,employeeType,securityClearance
+ADMIN1,Chandler,Garcia,08282001,ADMINISTRATOR,5
+ADMIN2,Tyler,Evans,10212001,ADMINISTRATOR,5
+DOC1,Shafath,Zaman,12345678,DOCTOR,4
+DOC2,Joanna,Hu,12345678,DOCTOR,4
+NUR1,Samuel,Karkache,1022002,NURSE,3
+NUR2,Rosemary,Shelton,12345678,NURSE,3
+ADMIN0,Jacob,Adams,12345678,ADMINISTRATOR,6
+JAN2,Alpay,Ariyak,12345678,JANITOR,2
+KIT1,Cole,Ouellette,12345678,KITCHEN,1
+KIT2,Luke,Gardone,12345678,KITCHEN,1
+admin,Nurse,"Wong, Ph.D.",12345678,ADMINISTRATOR,5
+staff,Happy,"Wong, Ph.D.",12345678,DOCTOR,4
+wongsweeper,mine,mine,12345678,JANITOR,2

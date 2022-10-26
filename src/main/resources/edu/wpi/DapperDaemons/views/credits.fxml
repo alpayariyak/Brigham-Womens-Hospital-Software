@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox prefHeight="46.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.AboutUsController">
+    <children>
+        <VBox prefHeight="542.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <children>
+                <VBox id="foreground" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;">
+                    <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="51.0" prefWidth="100.0" style="-fx-background-radius: 7.5 7.5 0 0;" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardTitle" text="API Credits">
+                                    <font>
+                                        <Font name="System Bold" size="23.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="118.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+                            <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                                      <Label id="label" prefHeight="36.0" prefWidth="280.0" text="We would like to thank the following SoftEng teams for letting using their APIs:" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Team B - Internal Patient Transport Request API">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="280.0">
+                           <children>
+                              <Label text="Team X - External Patient Transport Request API">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                            </children>
+                            <padding>
+                                <Insets left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="318.0" prefWidth="300.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label id="label" prefHeight="36.0" prefWidth="280.0" text="List of other 3rd-Party APIs used:" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Twilio">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="SI4J">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="FuzzyWuzzy">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Minesweeper - Robert Zink on GitHub">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Google Firebase">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="OpenCSV">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Apache Derby">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Gson">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="7.0" />
+                     </VBox.margin>
+                        </VBox>
+                    </children>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.15000000596046448" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="20.0" top="20.0" />
+                    </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox id="foreground" minHeight="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="500.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="51.0" prefWidth="100.0" style="-fx-background-radius: 7.5 7.5 0 0;" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardTitle" text="Library Credits">
+                                            <font>
+                                                <Font name="System Bold" size="23.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="160.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Text id="label" strokeType="OUTSIDE" strokeWidth="0.0" text="Below are special libraries used in our program: ">
+                                            <VBox.margin>
+                                                <Insets top="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="jSerialComm-1.3.1.jar - Fazecast, Inc. ">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Arduino.jar - Hirday Gupta on GitHub ">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="MFRC522.h - Miguel André Balboa on GitHub ">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children></VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="135.0" text="Arduino. h - Arduino, LLC">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                            </children>
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.15000000596046448" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="30.0" right="20.0" top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox id="foreground" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="51.0" prefWidth="100.0" style="-fx-background-radius: 7.5 7.5 0 0;" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardTitle" text="Other Resources Utilized">
+                                            <font>
+                                                <Font name="System Bold" size="23.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label id="label" text="Special Thanks to: " textAlignment="CENTER" wrapText="true">
+                                            <padding>
+                                                <Insets bottom="10.0" left="20.0" right="20.0" top="5.0" />
+                                            </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                                        <Label id="label" text="Professor Wilson Wong for his feeback and support">
+                                            <VBox.margin>
+                                                <Insets left="15.0" top="10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label id="label" text="Nestor Lopez for helping us with tons of issues and guiding us to success">
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label id="label" text="stackoverflow.com ">
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                            </children>
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color opacity="0.15000000596046448" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                            <HBox.margin>
+                                <Insets bottom="30.0" left="30.0" right="20.0" top="20.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</HBox>

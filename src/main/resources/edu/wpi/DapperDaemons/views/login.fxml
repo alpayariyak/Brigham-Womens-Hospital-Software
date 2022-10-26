@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="sceneBox" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="592.0" prefWidth="941.0" style="-fx-background-color: linear-gradient(from 0% 0% to 50% 50%, reflect,#057DA7,#08349A);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.LoginController">
+   <children>
+      <StackPane fx:id="windowContents" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane fx:id="BGContainer" prefHeight="200.0" prefWidth="200.0" />
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 7.5;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="225.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="129.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/signInImage.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="225.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="100.0">
+                           <children>
+                              <Label text="User ID:">
+                                 <padding>
+                                    <Insets left="45.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="7.5" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="username" onKeyPressed="#keyPressed" style="-fx-border-color: #00419D; -fx-background-radius: 4; -fx-border-radius: 4; -fx-border-width: 1.5;" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="45.0" right="45.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Password:">
+                                 <padding>
+                                    <Insets left="45.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="7.5" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="password" onKeyPressed="#keyPressed" style="-fx-border-color: #00419D; -fx-background-radius: 4; -fx-border-radius: 4; -fx-border-width: 1.5;" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="45.0" right="45.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </PasswordField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button id="defaultButton" cache="true" cacheHint="SPEED" mnemonicParsing="false" onMouseClicked="#login" onMouseEntered="#hoveredSubmit" onMouseExited="#unhoveredSubmit" prefHeight="32.0" prefWidth="200.0" styleClass="confirmButton" stylesheets="@../styling/lightMode.css" text="Login" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="35.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </VBox>
+            <VBox fx:id="tfaBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="300.0" prefWidth="380.0" style="-fx-background-color: FFFEFE; -fx-background-radius: 7.5;" visible="false">
+               <children>
+                  <StackPane pickOnBounds="false" prefHeight="340.0" prefWidth="380.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" pickOnBounds="false" prefHeight="340.0" prefWidth="380.0" spacing="13.0">
+                           <children>
+                              <Label pickOnBounds="false" text="Please enter your Two-Factor Authentication Code:" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="code" pickOnBounds="false" style="-fx-background-radius: 7.5; -fx-background-color: #f1f0f0; -fx-border-color: #646564; -fx-border-radius: 7.5;">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button id="defaultButton" cache="true" cacheHint="SPEED" mnemonicParsing="false" onMouseClicked="#authenticate" pickOnBounds="false" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #059DA7;" stylesheets="@../assets/buttons.css" text="Submit" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.15000000596046448" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </VBox>
+                        <VBox alignment="TOP_RIGHT" pickOnBounds="false" prefHeight="340.0" prefWidth="380.0">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#hidePopup" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/close.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="-0.43" />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+               <StackPane.margin>
+                  <Insets top="40.0" />
+               </StackPane.margin>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" pickOnBounds="false" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="40.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/BrighamLogoWhite.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

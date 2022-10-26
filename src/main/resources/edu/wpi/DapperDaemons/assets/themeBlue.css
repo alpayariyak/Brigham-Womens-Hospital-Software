@@ -1,0 +1,45 @@
+.backgroundBlue{
+    /*-fx-background-color: #747aaa !important;*/
+    /*TODO support home background*/
+}
+
+.switchBlue{
+    -fx-opacity: 1 !important;
+}
+
+.foregroundBlue{
+    -fx-background-color: #969cc5 !important;
+    -fx-fill: white !important;
+    -fx-text-fill: white !important;
+}
+
+.fieldBlue{
+    -fx-background-color: #a3d5d5 !important;
+    -fx-text-fill: white !important;
+}
+
+.specialFieldBlue{
+    -fx-control-inner-background: #a3d5d5 !important;
+    -fx-text-fill: white !important;
+}
+
+.textBlue{
+    -fx-fill: white !important;
+    -fx-text-fill: white !important;
+}
+
+.tableBlue {
+    -fx-background-color: #969cc5;
+    -fx-border-color: #a3d5d5;
+    -fx-text-fill: white;
+}
+
+.tableBlue.table-view{
+    -fx-background-color: #a3d5d5;
+}
+
+.tableBlue.column-header{
+    /*-fx-text-fill: white !important;*/
+    -fx-border-width: 0;
+    -fx-background-color: #d2d2d2;
+}

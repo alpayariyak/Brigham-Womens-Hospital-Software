@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox prefHeight="565.0" prefWidth="1027.0" stylesheets="@../styling/lightMode.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.MapController">
+   <children>
+      <StackPane fx:id="windowContents" prefHeight="150.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <children>
+            <ScrollPane fx:id="mapContents" hbarPolicy="NEVER" hvalue="0.55" pannable="true" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER" vvalue="0.44">
+               <content>
+                  <StackPane fx:id="mapAssets" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4375.0" prefWidth="4868.0" scaleX="0.4" scaleY="0.4">
+                     <children>
+                        <ImageView fx:id="mapView" fitHeight="4375.0" fitWidth="4968.0" onMouseClicked="#onMapClicked" onScroll="#scrollMap" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/Maps/00_thelowerlevel1.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="glyphsLayer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="4375.0" prefWidth="4968.0" />
+                        <AnchorPane fx:id="equipLayer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="4375.0" prefWidth="4968.0" />
+                        <AnchorPane fx:id="dragPane" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane fx:id="pinPane" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane fx:id="requestsPane" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" />
+                        <AnchorPane fx:id="pathPane" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </StackPane>
+               </content>
+            </ScrollPane>
+            <BorderPane pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+               <right>
+                  <StackPane fx:id="mapFilter" onMouseEntered="#showCarrot" onMouseExited="#hideCarrot" pickOnBounds="false" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox pickOnBounds="false" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" minWidth="-Infinity" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <StackPane fx:id="betsy" pickOnBounds="false" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox alignment="BOTTOM_RIGHT" pickOnBounds="false" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <ToggleButton mnemonicParsing="false" onMouseClicked="#setFloor5" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: #535353; -fx-background-radius: 7.5 7.5 0 0;" styleClass="map" stylesheets="@../../../../toggleButton.css" text="5" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="floorSwitches" />
+                                                   </toggleGroup>
+                                                </ToggleButton>
+                                                <ToggleButton mnemonicParsing="false" onMouseClicked="#setFloor4" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: #535353; -fx-background-radius: 0;" styleClass="map" stylesheets="@../../../../toggleButton.css" text="4" textFill="WHITE" toggleGroup="$floorSwitches">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </ToggleButton>
+                                                <ToggleButton mnemonicParsing="false" onMouseClicked="#setFloor3" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: #535353; -fx-background-radius: 0;" styleClass="map" stylesheets="@../../../../toggleButton.css" text="3" textFill="WHITE" toggleGroup="$floorSwitches">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </ToggleButton>
+                                                <ToggleButton mnemonicParsing="false" onMouseClicked="#setFloor2" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: #535353; -fx-background-radius: 0;" styleClass="map" stylesheets="@../../../../toggleButton.css" text="2" textFill="WHITE" toggleGroup="$floorSwitches">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </ToggleButton>
+                                                <ToggleButton mnemonicParsing="false" onMouseClicked="#setFloor1" prefHeight="32.0" prefWidth="38.0" selected="true" style="-fx-background-color: #535353; -fx-background-radius: 0;" styleClass="map" stylesheets="@../../../../toggleButton.css" text="1" textFill="WHITE" toggleGroup="$floorSwitches">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </ToggleButton>
+                                                <ToggleButton mnemonicParsing="false" onMouseClicked="#setFloorL1" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: #535353; -fx-background-radius: 0;" styleClass="map" stylesheets="@../../../../toggleButton.css" text="L1" textFill="WHITE" toggleGroup="$floorSwitches">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </ToggleButton>
+                                                <ToggleButton mnemonicParsing="false" onMouseClicked="#setFloorL2" prefHeight="32.0" prefWidth="38.0" style="-fx-background-color: #535353; -fx-background-radius: 0 0 7.5 7.5;" styleClass="map" stylesheets="@../../../../toggleButton.css" text="L2" textFill="WHITE" toggleGroup="$floorSwitches">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </ToggleButton>
+                                             </children>
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox fx:id="lineInfoBox" maxHeight="-Infinity" maxWidth="-Infinity" pickOnBounds="false" prefHeight="370.0" prefWidth="326.0" styleClass="pageCard" visible="false">
+                                             <children>
+                                                <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" pickOnBounds="false" prefHeight="51.0" prefWidth="100.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="212.0" styleClass="cardTitle" text="Path Information" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="19.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets bottom="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox pickOnBounds="false" prefHeight="70.0" prefWidth="100.0" style="-fx-border-color: #f2f2f2; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 2;">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Medical Equipment">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Line endX="85.0" startX="-100.0" style="-fx-stroke-dash-array: 12; -fx-stroke-width: 2; -fx-stroke: #99CC99FF;">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Line>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                                <VBox pickOnBounds="false" prefHeight="70.0" prefWidth="100.0" style="-fx-border-color: #f2f2f2; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 2;">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Medicine">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Line endX="85.0" startX="-100.0" style="-fx-stroke-dash-array: 12; -fx-stroke-width: 2; -fx-stroke: #F77F00FF;">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Line>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                                <VBox pickOnBounds="false" prefHeight="70.0" prefWidth="100.0" style="-fx-border-color: #f2f2f2; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 2;">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Equipment Cleaning">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Line endX="85.0" startX="-100.0" style="-fx-stroke-dash-array: 12; -fx-stroke-width: 2; -fx-stroke: #14213DFF;">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Line>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                                <VBox pickOnBounds="false" prefHeight="70.0" prefWidth="100.0" style="-fx-border-color: #f2f2f2; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 2;">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Patient Transport">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Line endX="85.0" startX="-100.0" style="-fx-stroke-dash-array: 12; -fx-stroke-width: 2; -fx-stroke: #643CB4FF;">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Line>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                                <VBox pickOnBounds="false" prefHeight="70.0" prefWidth="100.0" style="-fx-border-color: #f2f2f2; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 2;">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Meal Delivery">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Line endX="85.0" startX="-100.0" style="-fx-stroke-dash-array: 12; -fx-stroke-width: 2; -fx-stroke: #009D94FF;">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Line>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                                <VBox pickOnBounds="false" prefHeight="70.0" prefWidth="100.0" style="-fx-border-color: #f2f2f2; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 2;">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Language">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Line endX="85.0" startX="-100.0" style="-fx-stroke-dash-array: 12; -fx-stroke-width: 2; -fx-stroke: #F09C78FF;">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Line>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                                <VBox pickOnBounds="false" prefHeight="70.0" prefWidth="100.0" style="-fx-border-color: #f2f2f2; -fx-border-style: solid hidden hidden hidden; -fx-border-width: 2;">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Security">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="5.0" />
+                                                         </VBox.margin>
+                                                      </Text>
+                                                      <Line endX="85.0" startX="-100.0" style="-fx-stroke-dash-array: 12; -fx-stroke-width: 2; -fx-stroke: #9966CCFF;">
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </Line>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <effect>
+                                                <DropShadow>
+                                                   <color>
+                                                      <Color opacity="0.15000000596046448" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                             <StackPane.margin>
+                                                <Insets right="70.0" />
+                                             </StackPane.margin>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <HBox alignment="BOTTOM_RIGHT" pickOnBounds="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <StackPane maxHeight="-Infinity" minHeight="-Infinity" pickOnBounds="false" prefHeight="40.0" prefWidth="20.0">
+                                             <children>
+                                                <StackPane fx:id="circle5" onMouseClicked="#switchToMapDashboard" prefHeight="150.0" prefWidth="20.0">
+                                                   <children>
+                                                      <Circle fill="#059da7" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                                                         <effect>
+                                                            <DropShadow>
+                                                               <color>
+                                                                  <Color opacity="0.15000000596046448" />
+                                                               </color>
+                                                            </DropShadow>
+                                                         </effect>
+                                                      </Circle>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/return.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                                <ToggleButton fx:id="circle4" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dirToggle" prefHeight="40.0" prefWidth="40.0" styleClass="bubbles" stylesheets="@../../../../toggleButton.css" text="ToggleButton">
+                                                   <effect>
+                                                      <DropShadow>
+                                                         <color>
+                                                            <Color opacity="0.15000000596046448" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/footprints.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="1.0" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton fx:id="circle3" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editMode" prefHeight="40.0" prefWidth="40.0" styleClass="bubbles" stylesheets="@../../../../toggleButton.css" text="ToggleButton">
+                                                   <effect>
+                                                      <DropShadow>
+                                                         <color>
+                                                            <Color opacity="0.15000000596046448" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/pencil.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="1.0" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <StackPane fx:id="circle2" onMouseClicked="#openCreate" prefHeight="150.0" prefWidth="20.0">
+                                                   <children>
+                                                      <Circle fill="#059da7" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                                                         <effect>
+                                                            <DropShadow>
+                                                               <color>
+                                                                  <Color opacity="0.15000000596046448" />
+                                                               </color>
+                                                            </DropShadow>
+                                                         </effect>
+                                                      </Circle>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/new.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                                <ToggleButton fx:id="bubbleMenu" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#mapMenu" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20; -fx-background-color: #059DA7;" text="ToggleButton">
+                                                   <effect>
+                                                      <DropShadow>
+                                                         <color>
+                                                            <Color opacity="0.15000000596046448" />
+                                                         </color>
+                                                      </DropShadow>
+                                                   </effect>
+                                                   <graphic>
+                                                      <JFXHamburger scaleX="0.8" scaleY="0.8">
+                                                         <effect>
+                                                            <ColorAdjust brightness="1.0" />
+                                                         </effect>
+                                                      </JFXHamburger>
+                                                   </graphic>
+                                                </ToggleButton>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </StackPane>
+                                          <Button id="mapButton" mnemonicParsing="false" onMouseClicked="#zoomIn" style="-fx-background-color: #535353; -fx-background-radius: 7.5 0 0 7.5;" stylesheets="@../assets/buttons.css" text="+" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="19.0" />
+                                             </font>
+                                          </Button>
+                                          <Button id="mapButton" mnemonicParsing="false" onMouseClicked="#zoomOut" style="-fx-background-color: #535353; -fx-background-radius: 0 7.5 7.5 0;" stylesheets="@../assets/buttons.css" text="-" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="19.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" right="15.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <ScrollPane hbarPolicy="NEVER" hmax="0.0" minWidth="-Infinity" pannable="true" pickOnBounds="false" prefHeight="200.0" prefWidth="220.0" style="-fx-background-color: #fffefe;" vbarPolicy="NEVER" HBox.hgrow="ALWAYS">
+                                 <content>
+                                    <VBox fx:id="filterMenu" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #C4C4C4; -fx-border-width: 0 0 0 2; -fx-background-color: #FFFEFE;">
+                                       <children>
+                                          <HBox id="foreground" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../assets/Glyphs/MapIcons/zoom.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <ColorAdjust brightness="0.43" />
+                                                   </effect>
+                                                </ImageView>
+                                                <JFXComboBox fx:id="searchBar" editable="true" focusColor="#405aa800" labelFloat="true" prefHeight="30.0" prefWidth="157.0" promptText="Location/Request" styleClass="cardInput" unFocusColor="#4d4d4d00" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <VBox alignment="BOTTOM_CENTER" minWidth="-Infinity" prefHeight="200.0" prefWidth="220.0">
+                                             <children>
+                                                <ToggleButton id="foreground" fx:id="infoTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#infoToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Information Desk">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/infoDesk.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="retlTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#retlToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Retail">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/retail.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="servTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#servToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Services">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/service.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="staiTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#staiToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Stairs">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/stairs.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="elevTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#elevToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Elevators">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/elevator.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="restTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#restToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Restrooms">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/toilet.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="dirtTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#dirtToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Dirty Equipment Storage">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/dirty.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="storTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#storToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Storage">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/storage.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="patiTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#patiToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Patient Rooms">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/patientRoom.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="deptTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#deptToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Departments">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/dept.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="hallTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#hallToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Hallways">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/hall.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="labsTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#labsToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Labs">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/laboratory.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="exitTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#exitToggle" prefWidth="220.0" selected="true" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Exits">
+                                                   <graphic>
+                                                      <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/exit.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="pumpTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#pumpToggle" prefWidth="220.0" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Infusion Pumps">
+                                                   <graphic>
+                                                      <ImageView fx:id="infusionDragImage" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/pump.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="bedTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#bedToggle" prefWidth="220.0" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Beds">
+                                                   <graphic>
+                                                      <ImageView fx:id="bedDragImage" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/bed.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" fx:id="reclinerTG" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#reclinerToggle" prefWidth="220.0" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Recliners">
+                                                   <graphic>
+                                                      <ImageView fx:id="reclinerDragImage" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/recliner.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                                <ToggleButton id="foreground" alignment="CENTER_LEFT" minWidth="-Infinity" mnemonicParsing="false" onAction="#xrayToggle" prefWidth="220.0" styleClass="nodesToggle" stylesheets="@../../../../toggleButton.css" text="Xrays" fx:id="xrayTG">
+                                                   <graphic>
+                                                      <ImageView fx:id="reclinerDragImage1" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8">
+                                                         <image>
+                                                            <Image url="@../assets/Glyphs/MapIcons/xray.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <ColorAdjust brightness="-0.43" />
+                                                         </effect>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </ToggleButton>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" pickOnBounds="false" prefHeight="100.0" prefWidth="200.0" StackPane.alignment="TOP_RIGHT">
+                           <children>
+                              <ToggleButton fx:id="filterButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#filterSlider" opacity="0.0" pickOnBounds="false" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #FFFEFE; -fx-background-radius: 16; -fx-border-color: #C4C4C4; -fx-border-radius: 16; -fx-border-width: 2;" text="ToggleButton">
+                                 <graphic>
+                                    <StackPane pickOnBounds="false" prefHeight="32.0" prefWidth="32.0">
+                                       <children>
+                                          <ImageView fx:id="carrotOut" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/leftChevron.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="carrotBack" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5" visible="false">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/rightChevron.png" />
+                                             </image>
+                                             <StackPane.margin>
+                                                <Insets />
+                                             </StackPane.margin>
+                                          </ImageView>
+                                       </children>
+                                       <padding>
+                                          <Insets left="1.0" />
+                                       </padding>
+                                    </StackPane>
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                           <StackPane.margin>
+                              <Insets right="202.0" top="20.0" />
+                           </StackPane.margin>
+                        </HBox>
+                     </children>
+                  </StackPane>
+               </right>
+               <center>
+                  <VBox fx:id="centerBox" pickOnBounds="false" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane alignment="TOP_LEFT" pickOnBounds="false" prefHeight="150.0" prefWidth="260.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox maxWidth="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="260.0" prefWidth="260.0" />
+                              <VBox fx:id="createBox" maxHeight="-Infinity" maxWidth="-Infinity" pickOnBounds="false" prefHeight="300.0" prefWidth="230.0" styleClass="pageCard">
+                                 <children>
+                                    <Label fx:id="createTitle" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="230.0" styleClass="cardTitle" text="Create Location" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color opacity="0.15000000596046448" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <VBox prefHeight="150.0" prefWidth="100.0">
+                                       <children>
+                                          <Label id="label" styleClass="cardText" text="Room Name:">
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" top="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField id="field" fx:id="roomNameIn" styleClass="cardInput">
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="150.0" prefWidth="100.0">
+                                       <children>
+                                          <Label id="label" styleClass="cardText" text="Room Number:">
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" top="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="roomNumberIn" styleClass="cardInput">
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="150.0" prefWidth="100.0">
+                                       <children>
+                                          <Label id="label" styleClass="cardText" text="Type:">
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" top="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXComboBox fx:id="typeIn" editable="true" focusColor="#405aa800" prefHeight="34.0" prefWidth="353.0" promptText="Filter..." styleClass="cardInput" unFocusColor="#4d4d4d00" visibleRowCount="3">
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="selectLocationText" styleClass="cardText" text="Please select a valid location">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onMouseClicked="#closeCreate" onMouseEntered="#hoveredCancel" onMouseExited="#unhoveredCancel" styleClass="cancelButton" text="Cancel" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onMouseClicked="#onSubmitCreate" onMouseEntered="#hoveredSubmit" onMouseExited="#unhoveredSubmit" styleClass="confirmButton" text="Create" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="15.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </VBox>
+                              <VBox id="foreground" fx:id="emptyBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="259.0" prefWidth="270.0" style="-fx-background-color: WHite; -fx-background-radius: 7.5;" visible="false">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </VBox>
+                              <VBox fx:id="confirmPopup" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="281.0" styleClass="pageCard" visible="false" StackPane.alignment="CENTER">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="56.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/warning.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Delete Location?">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="230.0" spacing="6.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="tryAgainButton" mnemonicParsing="false" onMouseClicked="#onCancelDelete" onMouseEntered="#hoveredCancel" onMouseExited="#unhoveredCancel" prefHeight="36.0" prefWidth="246.0" styleClass="cancelButton" text="Cancel" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="tryAgainButton1" mnemonicParsing="false" onMouseClicked="#onConfirmDelete" onMouseEntered="#hoveredSubmit" onMouseExited="#unhoveredSubmit" prefHeight="36.0" prefWidth="246.0" styleClass="confirmButton" text="Confirm" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets left="15.0" right="15.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="roomInfoBox" maxHeight="-Infinity" maxWidth="-Infinity" pickOnBounds="false" prefHeight="370.0" prefWidth="326.0" styleClass="pageCard">
+                                 <children>
+                                    <VBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="51.0" prefWidth="100.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="212.0" styleClass="cardTitle" text="Room Information " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="19.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="5.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="70.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Name:" />
+                                          <TextField fx:id="nameLabel" styleClass="cardInput" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox prefHeight="70.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Floor:" />
+                                          <TextField id="field" fx:id="floorLabel" editable="false" styleClass="cardInput" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox prefHeight="70.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Type:" />
+                                          <TextField id="field" fx:id="nodeTypeLabel" styleClass="cardInput" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox prefHeight="70.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Building:" />
+                                          <TextField id="field" fx:id="buildingLabel" styleClass="cardInput" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <HBox id="foreground" alignment="CENTER" prefHeight="34.0" prefWidth="260.0" spacing="15.0" style="-fx-background-color: #fffefe;" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fx:id="equipList" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#showEquipList" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/wrench.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="personList" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#showPersonList" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/person.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="requestList" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#showReqList" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/clipboard.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="getDirections" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#onRandomizeToLocation" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/Glyphs/MapIcons/directionsIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onMouseClicked="#onConfirmChanges" onMouseEntered="#hoveredSubmit" onMouseExited="#unhoveredSubmit" prefHeight="32.0" prefWidth="150.0" styleClass="confirmButton" text="Confirm Changes" textFill="WHITE" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Button mnemonicParsing="false" onMouseClicked="#onDeleteLocation" onMouseEntered="#hoveredCancel" onMouseExited="#unhoveredCancel" styleClass="cancelButton" text="Delete" textFill="WHITE">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onMouseClicked="#closeRoom" onMouseEntered="#hoveredCancel" onMouseExited="#unhoveredCancel" styleClass="cancelButton" text="Close" textFill="WHITE">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <VBox fx:id="tableContainer" maxHeight="-Infinity" minHeight="-Infinity" pickOnBounds="false" prefHeight="150.0" prefWidth="100.0">
+                                       <children>
+                                          <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <TableView fx:id="equipTable" pickOnBounds="false" prefHeight="200.0" prefWidth="260.0" visible="false">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="Name" />
+                                                      <TableColumn prefWidth="75.0" text="Type" />
+                                                      <TableColumn prefWidth="75.0" text="CleanStatus" />
+                                                   </columns>
+                                                </TableView>
+                                                <TableView fx:id="personTable" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" visible="false">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="First Name" />
+                                                      <TableColumn prefWidth="75.0" text="Last Name" />
+                                                   </columns>
+                                                </TableView>
+                                                <TableView fx:id="requestTable" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" visible="false">
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="Priority" />
+                                                      <TableColumn prefWidth="75.0" text="Type" />
+                                                      <TableColumn prefWidth="75.0" text="Move?" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </StackPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</HBox>

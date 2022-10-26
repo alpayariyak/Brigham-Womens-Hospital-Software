@@ -1,0 +1,50 @@
+.floors.toggle-button {
+    -fx-background-color: #FFFEFE;
+    -fx-background-radius: 7.5;
+}
+
+.floors.toggle-button:selected {
+    -fx-background-color: #D2D2D2;
+    -fx-background-radius: 7.5;
+}
+
+.nodesToggle.toggle-button {
+    -fx-background-color: #FFFEFE;
+    -fx-background-radius: 7.5;
+}
+
+.nodesToggle.toggle-button:selected {
+    -fx-background-color: #ebebeb;
+    -fx-background-radius: 7.5;
+}
+
+
+.tableToggle.toggle-button{
+    -fx-background-color:  #C1C5D4;
+    -fx-background-radius:  7.5 7.5 0 0;
+
+}
+.tableToggle.toggle-button:selected{
+    -fx-background-color: #4b5b81;
+    -fx-background-radius: 7.5 7.5 0 0;
+
+}
+
+.bubbles.toggle-button{
+    -fx-background-color:  #059DA7;
+    -fx-background-radius:  20;
+
+}
+.bubbles.toggle-button:selected{
+    -fx-background-color: #07c7d5;
+    -fx-background-radius: 20;
+
+}
+
+.map.toggle-button{
+    -fx-opacity: 75%;
+}
+
+.map.toggle-button:selected{
+    -fx-opacity: 90%;
+}

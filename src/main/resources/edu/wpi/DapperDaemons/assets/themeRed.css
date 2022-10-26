@@ -1,0 +1,45 @@
+.backgroundRed{
+    /*-fx-background-color: #e55f5f !important;*/
+    /*TODO support home background*/
+}
+
+.switchRed{
+    -fx-opacity: 1 !important;
+}
+
+.foregroundRed{
+    -fx-background-color: #d06767 !important;
+    -fx-fill: white !important;
+    -fx-text-fill: white !important;
+}
+
+.fieldRed{
+    -fx-background-color: #be6889 !important;
+    -fx-text-fill: white !important;
+}
+
+.specialFieldRed{
+    -fx-control-inner-background: #be6889 !important;
+    -fx-text-fill: white !important;
+}
+
+.textRed{
+    -fx-fill: white !important;
+    -fx-text-fill: white !important;
+}
+
+.tableRed {
+    -fx-background-color: #d06767;
+    -fx-border-color: #be6889;
+    -fx-text-fill: white;
+}
+
+.tableRed.table-view{
+    -fx-background-color: #be689c;
+}
+
+.tableRed.column-header{
+    /*-fx-text-fill: white !important;*/
+    -fx-border-width: 0;
+    -fx-background-color: #d2d2d2;
+}

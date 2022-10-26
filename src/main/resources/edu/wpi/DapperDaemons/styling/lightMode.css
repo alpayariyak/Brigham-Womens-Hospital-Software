@@ -1,0 +1,200 @@
+
+/* file url: ../resources/edu/wpi/DapperDaemons/styling/lightMode.css */
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('interBold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter SemiBold';
+    src: url('interSemiBold.ttf');
+}
+@font-face {
+    font-family: 'Inter Black';
+    src: url('interBlack.ttf');
+}
+
+@font-face {
+    font-family: 'Inter ExtraLight';
+    src: url('interExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Inter Light';
+    src: url('interLight.ttf');
+}
+@font-face {
+    font-family: 'Inter Thin';
+    src: url('interThin.ttf');
+}
+@font-face {
+    font-family: "Inter ExtraBold";
+    src: url('interExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('interRegular.ttf');
+}
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('interMedium.ttf');
+}
+/* Header */
+.normalText{
+    -fx-font-family: "Inter SemiBold" !important;
+    -fx-text-fill: #FFFFFF !important;
+    -fx-fill: #FFFFFF !important;
+    -fx-font-size: 14px !important;
+}
+.title{
+    -fx-font-family: "Inter Bold" !important;
+    -fx-fill: #FFFFFF !important;
+    -fx-font-size: 28px !important;
+}
+
+.headerBackground{
+    -fx-background-color: linear-gradient(from 0% 0% to 50% 50%, reflect,#057DA7,#08349A) !important;
+
+    -fx-background-attachment: fixed !important;
+}
+
+/* Burger */
+.burger{
+    -fx-font-family: "Inter SemiBold" !important;
+    -fx-fill: #FFFFFF;
+    -fx-font-size: 16px !important;
+    -fx-cursor: hand;
+    transition: 2.0s;
+}
+
+.burger:pressed{
+    -fx-translate-y: 2px;
+}
+
+
+.sliderBackground{
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%,#057DA7,#065799) !important;
+}
+
+
+/* Request Page Elements */
+
+.pageBackground {
+    -fx-background-color: #F1F0F0;
+}
+
+.pageCard{
+    -fx-border-radius: 7.5;
+    -fx-background-radius: 7.5;
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(50, 50, 50, 0.15);
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, #32323218, 4, 0.15, -2, 2);
+
+}
+
+.cardTitle{
+    -fx-font-family: "Inter SemiBold"!important;
+    -fx-fill: #052F92 !important;
+    -fx-text-fill: #052F92 !important;
+    -fx-font-size: 23px !important;
+}
+
+.cardText{
+    -fx-font-family: "Inter Regular"!important;
+    -fx-fill: #2F2F2F !important;
+    -fx-font-size: 14px !important;
+}
+
+.cardInput{
+    -fx-font-family: "Inter Regular"!important;
+    -fx-text-fill: #2F2F2F;
+    -fx-font-size: 14px;
+    -fx-border-radius: 7.5;
+    -fx-background-radius: 7.5;
+    -fx-border-width: 1px;
+    -fx-border-color:  #D5D3D2;
+    -fx-background-color: #F1F0F0;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, #32323218, 4, 0.15, -2, 2);
+
+}
+
+.confirmButton {
+    -fx-background-radius: 7.5;
+    -fx-background-color: #FFFFFF00;
+    -fx-border-width: 2;
+    -fx-border-radius: 7.5;
+    -fx-border-color: #052F92;
+    -fx-font-family: "Inter SemiBold"!important;
+    -fx-text-fill: #052F92;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.confirmButton:pressed{
+    -fx-translate-y: 2;
+    -fx-opacity: 0.9;
+
+}
+
+.cancelButton{
+    -fx-background-color: #FFFFFF00;
+    -fx-font-family: "Inter SemiBold"!important;
+    -fx-font-size: 14px;
+    -fx-border-width: 2;
+    -fx-border-radius: 7.5;
+    -fx-background-radius: 7.5;
+    -fx-cursor: hand;
+
+
+    -fx-border-color:  #81A0CF;
+    -fx-text-fill:  #81A0CF;
+}
+
+
+
+.cancelButton:pressed{
+    -fx-background-color: #6887B6 !important;
+    -fx-translate-y: 2;
+    -fx-border-color:  #6887B6;
+
+}
+
+/* Table Specific Elements */
+.columnLabel{
+    -fx-font-family: "Inter Regular";
+    -fx-color: #2F2F2F;
+    -fx-font-size: 12px;
+}
+
+
+/* Joanna's buttons*/
+
+.joButton{
+    -fx-background-color: #059DA7;
+    -fx-background-radius: 20;
+}
+
+/* User Request Page Buttons*/
+
+.userToggleButton{
+
+    -fx-font-family: "Inter SemiBold"!important;
+    -fx-text-fill: #052F92 !important;
+    -fx-font-size: 18px !important;
+    -fx-background-color: #FFFFFFC0;
+    -fx-background-radius: 7.5 7.5 0 0;
+    -fx-pref-height: 75;
+}
+
+.userToggleButton:selected{
+
+    -fx-font-family: "Inter SemiBold"!important;
+    -fx-text-fill: #052F92 !important;
+    -fx-font-size: 18px !important;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 7.5 7.5 0 0;
+}
+

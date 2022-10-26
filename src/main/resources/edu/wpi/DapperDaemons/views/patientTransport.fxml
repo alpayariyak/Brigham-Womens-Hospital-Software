@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox prefHeight="513.0" prefWidth="681.0" spacing="30.0" styleClass="pageBackground" stylesheets="@../styling/lightMode.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.requestControllers.PatientTransportController">
+   <children>
+      <VBox maxHeight="440.0" maxWidth="520.0" prefHeight="200.0" prefWidth="100.0" styleClass="pageCard" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="71.0" prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Text fill="#052f92" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardTitle" text="Schedule Requests">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="7.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fill="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="First Name:" />
+                              <TextField id="field" fx:id="patientName" minHeight="-Infinity" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #F1F0F1; -fx-background-radius: 7.5; -fx-border-color: #D5D3D2; -fx-border-radius: 7.5;">
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fill="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Last Name:" />
+                              <TextField id="field" fx:id="patientLastName" minHeight="-Infinity" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #F1F0F1; -fx-background-radius: 7.5; -fx-border-color: #D5D3D2; -fx-border-radius: 7.5;">
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fill="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="DOB:" />
+                              <DatePicker fx:id="patientDOB" minHeight="-Infinity" prefHeight="30.0" prefWidth="250.0" promptText="Select" styleClass="cardInput">
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </DatePicker>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fill="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Room Destination:" />
+                              <JFXComboBox fx:id="roomBox" focusColor="#059ea600" minHeight="-Infinity" onKeyTyped="#startFuzzySearch" prefHeight="30.0" prefWidth="5000.0" promptText="    Select" styleClass="cardInput" unFocusColor="#4b5b8000">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </JFXComboBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fill="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Priority:" />
+                              <JFXComboBox fx:id="priorityIn" focusColor="#059ea600" minHeight="-Infinity" onKeyTyped="#startFuzzySearch" prefHeight="30.0" prefWidth="250.0" promptText="    Select" styleClass="cardInput" unFocusColor="#4b5b8000">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </JFXComboBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fill="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Date Needed:" />
+                              <DatePicker fx:id="dateNeeded" minHeight="-Infinity" prefHeight="30.0" prefWidth="250.0" promptText="Select" styleClass="cardInput">
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </DatePicker>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Employee ID:" />
+                              <JFXComboBox fx:id="assigneeBox" focusColor="#405aa800" minHeight="-Infinity" onKeyTyped="#startFuzzySearch" prefHeight="30.0" prefWidth="500.0" promptText="Select" styleClass="cardInput" unFocusColor="#4d4d4d00">
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </JFXComboBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Text fill="#2f2f2f" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Extra Notes:" />
+                              <TextField fx:id="notes" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="250.0" styleClass="cardInput">
+                                 <effect>
+                                    <DropShadow offsetX="-2.0" offsetY="2.0">
+                                       <color>
+                                          <Color red="0.19607843458652496" green="0.19607843458652496" blue="0.19607843458652496" opacity="0.15000000596046448" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="7.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onClearClicked" onMouseEntered="#hoveredCancel" onMouseExited="#unhoveredCancel" prefHeight="35.0" prefWidth="90.0" styleClass="cancelButton" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onSubmitClicked" onMouseEntered="#hoveredSubmit" onMouseExited="#unhoveredSubmit" prefHeight="35.0" prefWidth="90.0" styleClass="confirmButton" text="Submit" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <VBox minWidth="480.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="pageCard" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="71.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Text fill="#052f92" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardTitle" text="Transport Requests">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <content>
+                              <GridPane fx:id="table" style="-fx-background-color: FFFFFF;" vgap="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="csvButton" mnemonicParsing="false" onAction="#saveToCSV" onMouseEntered="#hoveredSubmit" onMouseExited="#unhoveredSubmit" prefHeight="35.0" prefWidth="110.0" styleClass="confirmButton" text="Save to CSV" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <effect>
+            <DropShadow offsetX="-2.0" offsetY="2.0">
+               <color>
+                  <Color opacity="0.15000000596046448" />
+               </color>
+            </DropShadow>
+         </effect>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,98 @@
+dEXIT00401,106,290,1,Tower,EXIT,West Plaza Entrance/Exit,WP
+FHALL01201,142,291,1,Tower,HALL,Tower Staff Entrance,Hallway F01201
+FSERV00201,199,390,1,Tower,SERV,Tower Medical Cashier,Tower Cashier
+FDEPT00201,204,481,1,Tower,DEPT,Bretholtz Center for Patients and Families,Bretholtz WR
+FDEPT00101,211,186,1,Tower,DEPT,Center for International Medicine,CIM
+FHALL01001,221,163,1,Tower,HALL,Tower Hallway 3,Hallway F01001
+FHALL01301,221,186,1,Tower,HALL,Tower Hallway 5,Hallway F01301
+FHALL00901,221,211,1,Tower,HALL,Tower Hallway 2,Hallway F00901
+FHALL01101,221,291,1,Tower,HALL,Tower Hallway 4,Hallway F01101
+FHALL01401,221,390,1,Tower,HALL,Tower Hallway 6,Hallway F01401
+FHALL01501,221,421,1,Tower,HALL,Tower Hallway 7,Hallway F01501
+FSTAI00201,267,163,1,Tower,STAI,Tower Stairway 1,Tower Stairs 1
+FHALL02001,294,481,1,Tower,HALL,Tower Hallway 12,Hallway F02001
+FSERV00301,294,519,1,Tower,SERV,Kessler Library,Kessler Library
+FINFO00101,294,587,1,Tower,INFO,75 Lobby Information Desk,Lobby Info Desk
+FDEPT00301,315,292,1,Tower,DEPT,Multifaith Chapel,Chapel
+FHALL01701,315,317,1,Tower,HALL,Tower Hallway 9,Hallway F01701
+FSERV00401,315,331,1,Tower,DEPT,Spiritual Care Office,SCO
+FHALL00801,352,211,1,Tower,HALL,Tower Hallway 1,Hallway F00801
+FHALL00701,352,291,1,Tower,HALL,Tower Elevator Entrance,Hallway F00701
+FHALL01801,352,317,1,Tower,HALL,Tower Hallway 10,Hallway F01801
+FHALL03201,352,390,1,Tower,HALL,Tower Hallway 13,Hallway F03201
+FHALL01601,352,421,1,Tower,HALL,Tower Hallway 8,Hallway F01601
+FHALL01901,352,481,1,Tower,HALL,Tower Hallway 11,Hallway F01901
+FHALL02101,363,507,1,Tower,HALL,Tower Hallway Entrance,Tower Entrance 2
+FDEPT00601,374,390,1,Tower,DEPT,International Patient Center,IPC
+FDEPT00401,388,507,1,Tower,DEPT,Sharf Admitting Center,Sharf Center
+WELEV00L01,404,291,1,Tower,ELEV,Elevator L Floor 1,Elevator L1
+FHALL00601,463,291,1,Tower,HALL,Tower Lobby Entrance 1,Tower Entrance
+FSERV00101,544,232,1,Tower,SERV,Shattuck Street Lobby ATM,Lobby ATM
+FHALL00501,544,271,1,Tower,HALL,Shattuck Street Lobby 3,Hallway F00501
+FRETL00101,567,205,1,Tower,RETL,Lobby Vending Machine,VM Lobby
+FHALL00401,567,271,1,Tower,HALL,Shattuck Street Lobby 2,Hallway F00401
+HBATH00102,205,377,2,Tower,BATH,Bathroom 1 Tower Floor 2,Bathroom 0102
+HRETL00202,215,394,2,Tower,RETL,Vending Machine Floor 2?,Vending Machine
+HSTAI00202,295,534,2,Tower,STAI,Stairwell 2 Tower Floor 2,Stairwell 0202
+HHALL00702,340,534,2,Tower,HALL,Hallway Connector 7 Floor 2,Hallway H00702
+HHALL00602,375,449,2,Tower,HALL,Hallway Connector 6 Floor 2,Hallway H00602
+WELEV00L02,405,294,2,Tower,ELEV,Elevator L Floor 2,Elevator L2
+HHALL00502,425,394,2,Tower,HALL,Hallway Connector 5 Floor 2,Hallway H00502
+HRETL00302,425,449,2,Tower,RETL,Gift Shop Tower Floor 2,Gift Shop
+HHALL00102,475,294,2,Tower,HALL,Hallway Connector 1 Floor 2,Hallway H00102
+HHALL00402,475,394,2,Tower,HALL,Hallway Connector 4 Floor 2,Hallway H00402
+HRETL00102,535,229,2,Tower,RETL,Garden Cafe,Garden Cafe
+HHALL00202,555,269,2,Tower,HALL,Hallway Connector 2 Floor 2,Hallway H00202
+dPATI00703,43,126,3,Tower,PATI,Patient Rooms Pod B,PRB
+dPATI01403,45,463,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00803,50,176,3,Tower,PATI,Patient Rooms Pod B,PRB
+dPATI01303,50,403,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00603,54,87,3,Tower,PATI,Patient Rooms Pod B,PRB
+dPATI01503,58,493,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00903,72,209,3,Tower,PATI,Patient Rooms Pod B,PRB
+dPATI01203,72,373,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00503,87,53,3,Tower,PATI,Patient Rooms Pod B,PRB
+dPATI01603,91,525,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI01003,123,234,3,Tower,PATI,Patient Rooms Pod B,PRB
+dPATI01103,123,346,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI01703,123,540,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00403,126,39,3,Tower,PATI,Patient Rooms Pod B,PRB
+dSTOR00103,141,134,3,Tower,STOR,Clean Equipment Storage,CES
+dSTOR00203,141,450,3,Tower,STOR,Clean Equipment Storage,CES
+dDIRT00103,143,290,3,TOWER,DIRT,Dirty Equipment Storage,DES
+dPATI01803,174,537,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00303,178,44,3,Tower,PATI,Patient Rooms Pod B,PRB
+dPATI01903,208,516,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00203,213,68,3,Tower,PATI,Patient Rooms Pod B,PRB
+HHALL01203,213,185,3,Tower,HALL,Hallway Connector 12 Floor 3,Hallway H01203
+HHALL01303,213,395,3,Tower,HALL,Hallway Connector 13 Floor 3,Hallway H01303
+dPATI02003,236,462,3,Tower,PATI,Patient Rooms Pod C,PRC
+dPATI00103,239,121,3,Tower,PATI,Patient Rooms Pod B,PRB
+dSTOR00403,293,177,3,Tower,STOR,Bed and Recliner Parking,BRP
+dSTOR00303,293,406,3,Tower,STOR,Bed and Recliner Parking,BRP
+HHALL01103,303,185,3,Tower,HALL,Hallway Connector 11 Floor 3,Hallway H01103
+HDEPT00203,303,195,3,Tower,DEPT,MICU 3BC Waiting Room,MICU 3BC WR
+HDEPT00103,338,265,3,Tower,DEPT,Dialysis Waiting Room,Dialysis WR
+HHALL00903,348,185,3,Tower,HALL,Hallway Connector 9 Floor 3,Hallway H00903
+HHALL00803,348,230,3,Tower,HALL,Hallway Connector 8 Floor 3,Hallway H00803
+HHALL00703,348,265,3,Tower,HALL,Hallway Connector 7 Floor 3,Hallway H00703
+HHALL00603,348,290,3,Tower,HALL,Hallway Connector 6 Floor 3,Hallway H00603
+HHALL01503,348,350,3,Tower,HALL,Hallway Connector 15 Floor 3,Hallway H01503
+HHALL01403,348,395,3,Tower,HALL,Hallway Connector 14 Floor 3,Hallway H01403
+HSERV00103,363,230,3,Tower,SERV,Nursing Room,Nursing Room
+HBATH00203,363,350,3,Tower,BATH,Bathroom 2 Tower Floor 3,Bathroom 0203
+HHALL01003,398,185,3,Tower,HALL,Hallway Connector 10 Floor 3,Hallway H01003
+HBATH00103,398,195,3,Tower,BATH,Bathroom 1 Tower Floor 3,Bathroom 0103
+WELEV00L03,403,290,3,Tower,ELEV,Elevator L Floor 3,Elevator L3
+dSTOR001L1,286,222,L1,Tower,STOR,OR Bed Park,ORBP
+CHALL001L1,350,291,L1,Tower,HALL,Hallway 1 Floor L1,Hallway C001L1
+CREST001L1,350,386,L1,Tower,REST,Restroom L Elevator Floor L1,Restroom C001L1
+CLABS002L1,368,457,L1,Tower,LABS,Pre-Op PACU Floor L1,Lab C002L1
+WELEV00LL1,403,291,L1,Tower,ELEV,Elevator L Floor L1,Elevator LL1
+CDEPT003L1,463,211,L1,Tower,DEPT,Day Surgery Family Waiting Exit Floor L1,Department C003L1
+CHALL014L1,463,291,L1,Tower,HALL,Hallway 14 Floor L1,Hallway C014L1
+CHALL009L2,350,218,L2,Tower,HALL,Hallway 9 Floor L2,Hallway C009L2
+CHALL008L2,350,293,L2,Tower,HALL,Hallway 8 Floor L2,Hallway C008L2
+CHALL007L2,350,378,L2,Tower,HALL,Hallway 7 Floor L2,Hallway C007L2
+CHALL006L2,365,378,L2,Tower,HALL,Hallway 6 Floor L2,Hallway C006L2
+WELEV00LL2,405,293,L2,Tower,ELEV,Elevator L Floor L2,Elevator LL2

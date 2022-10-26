@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="sceneBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="592.0" prefWidth="941.0" style="-fx-background-color: FBFBFB;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.loadingScreenController">
+   <children>
+      <ImageView fx:id="BGImage" fitHeight="302.0" fitWidth="408.0" pickOnBounds="true">
+         <image>
+            <Image url="@../loadingScreen/loading.gif" />
+         </image>
+      </ImageView>
+   </children>
+</VBox>

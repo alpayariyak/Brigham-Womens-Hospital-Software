@@ -1,0 +1,48 @@
+#defaultButton.button{
+    -fx-background-radius: 7.5;
+    -fx-cursor: hand;
+}
+
+#defaultButton.button:hover {
+    -fx-opacity: 85%;
+}
+
+#jButton {
+    -fx-background-color: #f1f0f0;
+    -fx-border-color: #D5D3D2;
+    -jfx-focus-color: #aaaaaa;
+    -jfx-unfocus-color: #aaaaaa;
+    -fx-background-radius: 7.5;
+    -fx-border-radius: 7.5;
+    -fx-cursor: hand;
+}
+
+#slider.button{
+    -fx-cursor: hand;
+    /*admin: ;*/
+}
+
+#slider.button:hover {
+    -fx-translate-x: 6;
+}
+
+#default{
+    -fx-cursor: hand;
+}
+
+#default:hover {
+    -fx-translate-y: -5;
+}
+
+#mapButton{
+    -fx-cursor: hand;
+    -fx-opacity: 75%;
+}
+
+#mapButton:hover{
+    -fx-opacity: 90%;
+}
+
+#field{
+    -fx-cursor: text;
+}

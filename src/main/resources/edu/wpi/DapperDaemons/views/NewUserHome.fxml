@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox prefHeight="554.0" prefWidth="760.0" styleClass="pageBackground" stylesheets="@../styling/lightMode.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.DapperDaemons.controllers.UserHomeController">
+    <children>
+          <VBox maxWidth="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="628.0" prefWidth="240.0" style="-fx-border-color: #C4C4C4; -fx-border-width: 0 2 0 0;" styleClass="pageBackground" HBox.hgrow="ALWAYS">
+              <children>
+            <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="201.0">
+               <children>
+                        <ToggleButton fx:id="homeButton" alignment="CENTER_LEFT" graphicTextGap="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goUserHome" onMouseEntered="#hoveredSideButton1" onMouseExited="#unhoveredSideButton1" pickOnBounds="false" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #059DA7; -fx-background-radius: 20;" styleClass="joButton" text="Home" textAlignment="RIGHT" textFill="WHITE">
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ToggleButton>
+                  <Circle fx:id="home" fill="WHITE" radius="30.0" stroke="#059da7" strokeType="INSIDE" strokeWidth="2.0" />
+                  <ImageView fitHeight="48.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@../assets/house.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets left="8.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" right="10.0" />
+               </VBox.margin>
+            </StackPane>
+            <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <ToggleButton fx:id="homeButton111" alignment="CENTER_LEFT" graphicTextGap="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openAccountSettings" onMouseEntered="#hoveredSideButton2" onMouseExited="#unhoveredSideButton2" pickOnBounds="false" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #059DA7; -fx-background-radius: 20;" styleClass="joButton" text="Account Settings" textAlignment="RIGHT" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <Circle fx:id="accountSettings" fill="WHITE" radius="30.0" stroke="#059da7" strokeType="INSIDE" strokeWidth="2.0" />
+                  <ImageView fitHeight="46.0" fitWidth="48.0">
+                     <image>
+                        <Image url="@../assets/blueGears.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets left="6.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </StackPane>
+            <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <ToggleButton fx:id="homeButton11" alignment="CENTER_LEFT" graphicTextGap="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openUserSecurity" onMouseEntered="#hoveredSideButton3" onMouseExited="#unhoveredSideButton3" pickOnBounds="false" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #059DA7; -fx-background-radius: 20;" styleClass="joButton" text="Security" textAlignment="RIGHT" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <Circle fx:id="security" fill="WHITE" radius="30.0" stroke="#059da7" strokeType="INSIDE" strokeWidth="2.0" />
+                  <ImageView fitHeight="45.0" fitWidth="45.0">
+                     <image>
+                        <Image url="@../assets/lock.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets left="7.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </StackPane>
+            <StackPane alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <ToggleButton fx:id="homeButton1" alignment="CENTER_LEFT" graphicTextGap="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openAboutUs" onMouseEntered="#hoveredSideButton4" onMouseExited="#unhoveredSideButton4" pickOnBounds="false" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #059DA7; -fx-background-radius: 20;" styleClass="joButton" text="About" textAlignment="RIGHT" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <Circle fx:id="about" fill="WHITE" radius="30.0" stroke="#059da7" strokeType="INSIDE" strokeWidth="2.0" />
+                  <ImageView fitHeight="46.0" fitWidth="45.0">
+                     <image>
+                        <Image url="@../assets/about.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets left="7.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </VBox.margin>
+            </StackPane>
+              </children>
+         <HBox.margin>
+            <Insets bottom="30.0" top="30.0" />
+         </HBox.margin>
+          </VBox>
+      <VBox prefHeight="512.0" prefWidth="570.0" styleClass="pageBackground" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="205.0" prefWidth="500.0" style="-fx-border-color: #C4C4C4; -fx-border-width: 0 0 2 0;" VBox.vgrow="ALWAYS">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Circle fx:id="profilePic" fill="#d2d2d2" radius="90.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="25.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <VBox alignment="CENTER_LEFT" prefHeight="180.0" prefWidth="284.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text fx:id="accountName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardTitle" text="Name">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="accountUserName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cardText" text="Username">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="employeeID" styleClass="cardText" text="Employee ID">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="email" styleClass="cardText" text="Email">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="25.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" right="100.0" top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="251.0" prefWidth="566.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <StackPane alignment="TOP_RIGHT" maxHeight="-Infinity" prefHeight="250.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" onMouseClicked="#switchToUserRequests" onMouseEntered="#hoveredCenterButton" onMouseExited="#unhoveredCenterButton" prefHeight="180.0" prefWidth="150.0" styleClass="pageCard">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="150.0" prefWidth="150.0" stylesheets="@../styling/lightMode.css">
+                                 <children>
+                                    <Pane fx:id="reqContainer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fx:id="reqImage" fitHeight="109.0" fitWidth="103.0" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/requests.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                              <Label styleClass="cardText" stylesheets="@../styling/lightMode.css" text="My Requests" textFill="#012d5a">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.15000000596046448" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <StackPane.margin>
+                              <Insets right="20.0" top="20.0" />
+                           </StackPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <Circle fx:id="requestNot" fill="#e10202" radius="20.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </StackPane.margin></Circle>
+                        <Label fx:id="requestNum" text="2" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets right="20.0" top="15.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="TOP_RIGHT" layoutX="317.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="250.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" onMouseClicked="#openNotifications" onMouseEntered="#hoveredCenterButton" onMouseExited="#unhoveredCenterButton" prefHeight="180.0" prefWidth="150.0" styleClass="pageCard">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="150.0" prefWidth="150.0" stylesheets="@../styling/lightMode.css">
+                                 <children>
+                                    <Pane fx:id="notContainer" prefHeight="138.0" prefWidth="157.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fx:id="notImage" fitHeight="96.0" fitWidth="93.0" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/bell.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                              <Label styleClass="cardText" text="My Notifications" textFill="#012d5a">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.15000000596046448" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <StackPane.margin>
+                              <Insets right="20.0" top="20.0" />
+                           </StackPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                        <Circle fx:id="notificationNot" fill="#e10202" radius="20.0" stroke="BLACK" strokeType="INSIDE">
+                           <StackPane.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </StackPane.margin></Circle>
+                        <Label fx:id="notificationNum" text="10" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets right="15.0" top="15.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane alignment="TOP_RIGHT" layoutX="457.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="250.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" onMouseClicked="#openAccountSettings" onMouseEntered="#hoveredCenterButton" onMouseExited="#unhoveredCenterButton" prefHeight="180.0" prefWidth="150.0" styleClass="pageCard">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="100.0" prefHeight="150.0" prefWidth="150.0" stylesheets="@../styling/lightMode.css">
+                                 <children>
+                                    <Pane fx:id="settingContainer" prefHeight="128.0" prefWidth="150.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fx:id="settingImage" fitHeight="103.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/userSettings.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                              <Label styleClass="cardText" text="Settings" textFill="#012d5a">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.15000000596046448" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <StackPane.margin>
+                              <Insets right="20.0" top="20.0" />
+                           </StackPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="150.0" />
+                     </HBox.margin>
+                  </StackPane>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="50.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+    </children>
+</HBox>
